@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+
+	"name": "TranslateIt",
+	"description": "翻訳します",
+	"version": "1.0",
+
+	"permissions": ["contextMenus", "tabs"],
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": ["content.js"]
+	}],
+	"background": {
+		"scripts": ["contextMenu.js"],
+		"persistent": false
+	}
+}
